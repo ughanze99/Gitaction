@@ -1,11 +1,11 @@
 name: workflow1
-  on: [push,workflow]
+  on: push
   jobs: 
     Run-Job: 
-    runs-on: ubuntu-latest
-    steps: 
+      runs-on: ubuntu-latest
+      steps:
       - name: get Code
-      usues: action/checkout@v3
+        uses: action/checkout@v3
       - name: Install dependencies
         run: npm ci
       - name: Lint  
